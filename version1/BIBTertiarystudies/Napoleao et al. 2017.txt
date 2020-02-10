@@ -1,0 +1,8 @@
+@inproceedings{inproceedings,
+author = {Napoleão, Bianca and Felizardo, Katia and Souza, Erica and Vijaykumar, Nandamudi},
+year = {2017},
+month = {07},
+pages = {85-90},
+title = {Practical similarities and differences between Systematic Literature Reviews and Systematic Mappings: a tertiary study},
+doi = {10.18293/SEKE2017-069}
+}

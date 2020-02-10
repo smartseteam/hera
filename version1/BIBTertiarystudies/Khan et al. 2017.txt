@@ -1,0 +1,20 @@
+@InProceedings{10.1007/978-3-319-64218-5_14,
+author="Khan, Arif Ali
+and Keung, Jacky
+and Niazi, Mahmood
+and Hussain, Shahid
+and Zhang, He",
+editor="Stolfa, Jakub
+and Stolfa, Svatopluk
+and O'Connor, Rory V.
+and Messnarz, Richard",
+title="Systematic Literature Reviews of Software Process Improvement: A Tertiary Study",
+booktitle="Systems, Software and Services Process Improvement",
+year="2017",
+publisher="Springer International Publishing",
+address="Cham",
+pages="177--190",
+abstract="Systematic Literature Review (SLR) is becoming a vital part of present day research in software process improvement (SPI). Nevertheless, there is no available study that provides detail review of the published software process improvement SLRs. Objective: The aim of this article is to classify the SLRs of SPI in order to identify the main research areas covered and evaluate the quality of the published SLRs. Methodology: A tertiary study was conducted to review the SLRs published by other researchers on the topic of SPI. Results: Twenty-four SLR articles were identified in the field of SPI. Results show that the quality of the selected SLRs on SPI is decreasing over the recent years. The most popular research topics are factors affecting SPI and process models. Conclusions: This study provides the review and state of the art in the context of SPI research. The results of this article would be of great interest for future SPI researchers by providing in depth understanding of various research areas in SPI. The number of process improvement SLRs is increasing and the overall quality is decreasing, which could lessen their potential impact on SPI practice. Currently, SPI literature is weak in the knowledge areas such as quality and software testing process improvement.",
+isbn="978-3-319-64218-5"
+}
+

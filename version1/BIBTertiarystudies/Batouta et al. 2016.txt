@@ -1,0 +1,13 @@
+@INPROCEEDINGS{7805042, 
+author={Z. I. {Batouta} and R. {Dehbi} and M. {Talea} and O. {Hajoui}}, 
+booktitle={2016 4th IEEE International Colloquium on Information Science and Technology (CiSt)}, 
+title={Automation in code generation: Tertiary and systematic mapping review}, 
+year={2016}, 
+volume={}, 
+number={}, 
+pages={200-205}, 
+abstract={Automation and generation of complex solutions is a flowering field that is gaining ground day by day to this the need for a study to collect all the recent research development in this area. In fact, the research is very abundant in some point that research have not away or who are just redundant. The overall objective of this paper is to plot the landscape of published proposals in the field of automation and code generation, without restricting the search neither to a specific context nor to a particular programming language. We decide in our article to combine two interesting approaches which permit to focus effectively a given field: Tertiary review and Systematic mapping review; this combination is very constructive and allow us to enlarge and feed our study. Our review is based on a comprehensive set of 2450 selected resources over 6223 studies that were initially identified: 2347 secondary articles, and 103 primary articles selected. As a result of our study we conclude that there is need for research that validates and evaluates the existing proposals.}, 
+keywords={program compilers;reverse engineering;code generation automation;systematic mapping review;tertiary review;primary articles;secondary articles;reverse engineering;Systematics;Automation;Data mining;Software engineering;DSL;Interoperability;Software;Tertiary review;Systematic mapping review;Reverse Engineering;Automation;Code generation}, 
+doi={10.1109/CIST.2016.7805042}, 
+ISSN={2327-1884}, 
+month={Oct},}

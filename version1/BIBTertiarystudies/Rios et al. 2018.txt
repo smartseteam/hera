@@ -1,0 +1,22 @@
+@article{RIOS2018117,
+title = "A tertiary study on technical debt: Types, management strategies, research trends, and base information for practitioners",
+journal = "Information and Software Technology",
+volume = "102",
+pages = "117 - 145",
+year = "2018",
+issn = "0950-5849",
+doi = "https://doi.org/10.1016/j.infsof.2018.05.010",
+url = "http://www.sciencedirect.com/science/article/pii/S0950584918300946",
+author = "Nicolli Rios and Manoel Gomes de Mendonça Neto and Rodrigo Oliveira Spínola",
+keywords = "Technical debt, Technical debt types, Management strategies, Tertiary study",
+abstract = "Context
+The concept of technical debt (TD) contextualizes problems faced during software evolution considering the tasks that are not carried out adequately during its development. Currently, it is common to associate any impediment related to the software product and its development process to the definition of TD. This can bring confusion and ambiguity in the use of the term. Besides, due to the increasing amount of work in the area, it is difficult to have a comprehensive view of the plethora of proposals on TD management.
+Objective
+This paper intends to investigate the current state of research on TD by identifying what research topics have been considered, organizing research directions and practical knowledge that has already been defined, identifying the known types of TD, and organizing what activities, strategies and tools have been proposed to support the management of TD.
+Method
+A tertiary study was performed based on a set of five research questions. In total, 13 secondary studies, dated from 2012 to March 2018, were evaluated.
+Results
+The results of this tertiary study are beneficial for both practitioners and researchers. We evolved a taxonomy of TD types, identified a list of situations in which debt items can be found in software projects, and organized a map representing the state of the art of activities, strategies and tools to support TD management. Besides, we also summarized some research directions and practical knowledge, and identified the research topics that have been more considered in secondary studies.
+Conclusion
+This tertiary study revisited the TD landscape. Its results can help to identify points that still require further investigation in TD research."
+}

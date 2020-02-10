@@ -1,0 +1,17 @@
+@inproceedings{10.1145/2460999.2461025,
+author = {Imtiaz, Salma and Bano, Muneera and Ikram, Naveed and Niazi, Mahmood},
+title = {A Tertiary Study: Experiences of Conducting Systematic Literature Reviews in Software Engineering},
+year = {2013},
+isbn = {9781450318488},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2460999.2461025},
+doi = {10.1145/2460999.2461025},
+booktitle = {Proceedings of the 17th International Conference on Evaluation and Assessment in Software Engineering},
+pages = {177–182},
+numpages = {6},
+keywords = {systematic literature reviews, experiences, tertiary study, empirical software engineering, lessons learnt},
+location = {Porto de Galinhas, Brazil},
+series = {EASE ’13}
+}
+  

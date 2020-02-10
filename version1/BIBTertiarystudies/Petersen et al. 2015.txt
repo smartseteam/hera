@@ -1,0 +1,22 @@
+@article{PETERSEN20151,
+title = "Guidelines for conducting systematic mapping studies in software engineering: An update",
+journal = "Information and Software Technology",
+volume = "64",
+pages = "1 - 18",
+year = "2015",
+issn = "0950-5849",
+doi = "https://doi.org/10.1016/j.infsof.2015.03.007",
+url = "http://www.sciencedirect.com/science/article/pii/S0950584915000646",
+author = "Kai Petersen and Sairam Vakkalanka and Ludwik Kuzniarz",
+keywords = "Systematic mapping studies, Software engineering, Guidelines",
+abstract = "Context
+Systematic mapping studies are used to structure a research area, while systematic reviews are focused on gathering and synthesizing evidence. The most recent guidelines for systematic mapping are from 2008. Since that time, many suggestions have been made of how to improve systematic literature reviews (SLRs). There is a need to evaluate how researchers conduct the process of systematic mapping and identify how the guidelines should be updated based on the lessons learned from the existing systematic maps and SLR guidelines.
+Objective
+To identify how the systematic mapping process is conducted (including search, study selection, analysis and presentation of data, etc.); to identify improvement potentials in conducting the systematic mapping process and updating the guidelines accordingly.
+Method
+We conducted a systematic mapping study of systematic maps, considering some practices of systematic review guidelines as well (in particular in relation to defining the search and to conduct a quality assessment).
+Results
+In a large number of studies multiple guidelines are used and combined, which leads to different ways in conducting mapping studies. The reason for combining guidelines was that they differed in the recommendations given.
+Conclusion
+The most frequently followed guidelines are not sufficient alone. Hence, there was a need to provide an update of how to conduct systematic mapping studies. New guidelines have been proposed consolidating existing findings."
+}

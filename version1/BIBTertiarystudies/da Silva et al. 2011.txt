@@ -1,0 +1,24 @@
+@article{DASILVA2011899,
+title = "Six years of systematic literature reviews in software engineering: An updated tertiary study",
+journal = "Information and Software Technology",
+volume = "53",
+number = "9",
+pages = "899 - 913",
+year = "2011",
+note = "Studying work practices in Global Software Engineering",
+issn = "0950-5849",
+doi = "https://doi.org/10.1016/j.infsof.2011.04.004",
+url = "http://www.sciencedirect.com/science/article/pii/S0950584911001017",
+author = "Fabio Q.B. da Silva and André L.M. Santos and Sérgio Soares and A. César C. França and Cleviton V.F. Monteiro and Felipe Farias Maciel",
+keywords = "Systematic reviews, Mapping studies, Software engineering, Tertiary studies",
+abstract = "Context
+Since the introduction of evidence-based software engineering in 2004, systematic literature review (SLR) has been increasingly used as a method for conducting secondary studies in software engineering. Two tertiary studies, published in 2009 and 2010, identified and analysed 54 SLRs published in journals and conferences in the period between 1st January 2004 and 30th June 2008.
+Objective
+In this article, our goal was to extend and update the two previous tertiary studies to cover the period between 1st July 2008 and 31st December 2009. We analysed the quality, coverage of software engineering topics, and potential impact of published SLRs for education and practice.
+Method
+We performed automatic and manual searches for SLRs published in journals and conference proceedings, analysed the relevant studies, and compared and integrated our findings with the two previous tertiary studies.
+Results
+We found 67 new SLRs addressing 24 software engineering topics. Among these studies, 15 were considered relevant to the undergraduate educational curriculum, and 40 appeared of possible interest to practitioners. We found that the number of SLRs in software engineering is increasing, the overall quality of the studies is improving, and the number of researchers and research organisations worldwide that are conducting SLRs is also increasing and spreading.
+Conclusion
+Our findings suggest that the software engineering research community is starting to adopt SLRs consistently as a research method. However, the majority of the SLRs did not evaluate the quality of primary studies and fail to provide guidelines for practitioners, thus decreasing their potential impact on software engineering practice."
+}

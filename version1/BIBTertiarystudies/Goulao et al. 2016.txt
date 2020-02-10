@@ -1,0 +1,19 @@
+@article{10.1007/s11219-016-9324-8,
+author = {Goul\~{a}o, Miguel and Amaral, Vasco and Mernik, Marjan},
+title = {Quality in Model-Driven Engineering: A Tertiary Study},
+year = {2016},
+issue_date = {September 2016},
+publisher = {Kluwer Academic Publishers},
+address = {USA},
+volume = {24},
+number = {3},
+issn = {0963-9314},
+url = {https://doi.org/10.1007/s11219-016-9324-8},
+doi = {10.1007/s11219-016-9324-8},
+journal = {Software Quality Journal},
+month = sep,
+pages = {601–633},
+numpages = {33},
+keywords = {Quality, Tertiary study, Model-driven engineering}
+}
+  

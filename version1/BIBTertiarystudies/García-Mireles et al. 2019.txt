@@ -1,0 +1,17 @@
+@InProceedings{10.1007/978-3-030-33547-2_10,
+author="Garc{\'i}a-Mireles, Gabriel Alberto
+and Morales-Trujillo, Miguel Eh{\'e}catl",
+editor="Mejia, Jezreel
+and Mu{\~{n}}oz, Mirna
+and Rocha, {\'A}lvaro
+and A. Calvo-Manzano, Jose",
+title="Gamification in Software Engineering: A Tertiary Study",
+booktitle="Trends and Applications in Software Engineering",
+year="2020",
+publisher="Springer International Publishing",
+address="Cham",
+pages="116--128",
+abstract="Gamification is a research area that influences the extent to which software organizations work and educational practices can be improved in software engineering (SE). Given that several systematic reviews on gamification in SE have been published, this paper aims at understanding how gamification has been addressed, simultaneously identifying its impact on SE. As a result of this systematic mapping, we identified 12 secondary studies. The majority of papers reported the usage of points, badges, and leaderboards as game elements in software engineering process, software engineering methods and tools, and software engineering management. Although secondary studies reported a positive impact of gamification, more empirical research is required. In a nutshell, current research focuses on the feasibility of using gamification in different SE areas; however, there is a need for research of application context and for defining variables under study to carry out more sound empirical research.",
+isbn="978-3-030-33547-2"
+}
+

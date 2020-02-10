@@ -1,0 +1,13 @@
+@INPROCEEDINGS{6065571, 
+author={G. K. {Hanssen} and D. {Šmite} and N. B. {Moe}}, 
+booktitle={2011 IEEE Sixth International Conference on Global Software Engineering Workshop}, 
+title={Signs of Agile Trends in Global Software Engineering Research: A Tertiary Study}, 
+year={2011}, 
+volume={}, 
+number={}, 
+pages={17-23}, 
+abstract={In this paper we present preliminary findings from a tertiary study on global software engineering. In particular, we observe current trends in the software engineering research and perform an investigation of the role of agile topics in the GSE research literature. Our findings indicate that agility is one of the topics attracting attention in the research agenda for global software companies. In contrast to recent beliefs that agile and distributed are two incompatibilities Global Agile development becomes more and more accepted, a trend which we also see from the growing amount of research on GSE and agile. Finally we conclude that there are indications that both globalization and "agilization" of software companies are stable trends for the future but that there is a strong need for further studies on the particular challenges that distribution of work imposes on the principles of agile development.}, 
+keywords={software houses;software prototyping;global software engineering;GSE research;global software companies;global agile software development;Software engineering;Programming;Systematics;Software;Conferences;Teamwork;global software engineering;tertiary study}, 
+doi={10.1109/ICGSE-W.2011.12}, 
+ISSN={2329-6313}, 
+month={Aug},}

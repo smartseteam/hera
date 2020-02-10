@@ -1,0 +1,17 @@
+@inproceedings{10.1145/3275245.3275270,
+author = {Ruiz, Glauco Antonio and Napole\~{a}o, Bianca Minetto and de Souza, Erica Ferreira and Felizardo, Katia Romero and Meinerz, Giovani Volnei and da Silva, Patrick Rodrigo and Vijaykumar, Nandamudi L.},
+title = {Using Meta-Ethnography to Synthesize Research on Knowledge Management and Agile Software Development Methodology},
+year = {2018},
+isbn = {9781450365659},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3275245.3275270},
+doi = {10.1145/3275245.3275270},
+booktitle = {Proceedings of the 17th Brazilian Symposium on Software Quality},
+pages = {230–239},
+numpages = {10},
+keywords = {Agile Software Development, Knowledge Management, Software Engineering},
+location = {Curitiba, Brazil},
+series = {SBQS}
+}
+  

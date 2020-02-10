@@ -1,0 +1,19 @@
+@article{10.1016/j.infsof.2017.01.007,
+author = {Hoda, Rashina and Salleh, Norsaremah and Grundy, John and Tee, Hui Mien},
+title = {Systematic Literature Reviews in Agile Software Development},
+year = {2017},
+issue_date = {May 2017},
+publisher = {Butterworth-Heinemann},
+address = {USA},
+volume = {85},
+number = {C},
+issn = {0950-5849},
+url = {https://doi.org/10.1016/j.infsof.2017.01.007},
+doi = {10.1016/j.infsof.2017.01.007},
+journal = {Inf. Softw. Technol.},
+month = may,
+pages = {60–70},
+numpages = {11},
+keywords = {Agile software development, Systematic literature reviews, Mapping study, Tertiary study}
+}
+  

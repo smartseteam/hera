@@ -1,0 +1,7 @@
+@inproceedings{inproceedings,
+author = {Villalobos, Leonardo and Quesada-López, Christian and Martinez, Alexandra},
+year = {2018},
+month = {04},
+pages = {},
+title = {A tertiary study on model-based testing areas, tools and challenges: Preliminary results}
+}

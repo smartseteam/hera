@@ -1,0 +1,17 @@
+@inproceedings{10.1145/3210459.3210474,
+author = {Singh, Paramvir and Galster, Matthias and Singh, Karanpreet},
+title = {How Do Secondary Studies in Software Engineering Report Automated Searches? A Preliminary Analysis},
+year = {2018},
+isbn = {9781450364034},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3210459.3210474},
+doi = {10.1145/3210459.3210474},
+booktitle = {Proceedings of the 22nd International Conference on Evaluation and Assessment in Software Engineering 2018},
+pages = {145–150},
+numpages = {6},
+keywords = {Systematic literature reviews, secondary studies, search process, tertiary study, reliability, mapping studies, reproducibility},
+location = {Christchurch, New Zealand},
+series = {EASE’18}
+}
+  

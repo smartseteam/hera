@@ -1,0 +1,24 @@
+@article{KITCHENHAM20097,
+title = "Systematic literature reviews in software engineering – A systematic literature review",
+journal = "Information and Software Technology",
+volume = "51",
+number = "1",
+pages = "7 - 15",
+year = "2009",
+note = "Special Section - Most Cited Articles in 2002 and Regular Research Papers",
+issn = "0950-5849",
+doi = "https://doi.org/10.1016/j.infsof.2008.09.009",
+url = "http://www.sciencedirect.com/science/article/pii/S0950584908001390",
+author = "Barbara Kitchenham and O. Pearl Brereton and David Budgen and Mark Turner and John Bailey and Stephen Linkman",
+keywords = "Systematic literature review, Evidence-based software engineering, Tertiary study, Systematic review quality, Cost estimation",
+abstract = "Background
+In 2004 the concept of evidence-based software engineering (EBSE) was introduced at the ICSE04 conference.
+Aims
+This study assesses the impact of systematic literature reviews (SLRs) which are the recommended EBSE method for aggregating evidence.
+Method
+We used the standard systematic literature review method employing a manual search of 10 journals and 4 conference proceedings.
+Results
+Of 20 relevant studies, eight addressed research trends rather than technique evaluation. Seven SLRs addressed cost estimation. The quality of SLRs was fair with only three scoring less than 2 out of 4.
+Conclusions
+Currently, the topic areas covered by SLRs are limited. European researchers, particularly those at the Simula Laboratory appear to be the leading exponents of systematic literature reviews. The series of cost estimation SLRs demonstrate the potential value of EBSE for synthesising evidence and making it available to practitioners."
+}

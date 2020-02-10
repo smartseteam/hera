@@ -1,0 +1,8 @@
+@inproceedings{inproceedings,
+author = {Oliveira, Edson and Conte, Tayana and Cristo, Marco and Valentim, Natasha},
+year = {2018},
+month = {07},
+pages = {68-103},
+title = {Influence Factors in Software Productivity - A Tertiary Literature Review},
+doi = {10.18293/SEKE2018-149}
+}

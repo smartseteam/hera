@@ -1,0 +1,13 @@
+@INPROCEEDINGS{6337361, 
+author={A. C. C. d. {Santos} and I. H. d. F. {Junior} and H. P. d. {Moura} and S. {Marczak}}, 
+booktitle={2012 IEEE Seventh International Conference on Global Software Engineering}, 
+title={A Systematic Tertiary Study of Communication in Distributed Software Development Projects}, 
+year={2012}, 
+volume={}, 
+number={}, 
+pages={182-182}, 
+abstract={Distributed Software Development (DSD) is characterized by physical distance and/or different time-zones among those involved in the process of developing software[1]. This paper presents a systematic tertiary study about communication in distributed development that aimed to identify and to synthesize factors that influence the effectiveness of communication in such settings and its effects in the design of such projects.}, 
+keywords={distributed processing;project management;software engineering;distributed software development project design;systematic tertiary study;distributed development communication;DSD project;Software;Systematics;Software engineering;Context;Conferences;Abstracts;Indexes}, 
+doi={10.1109/ICGSE.2012.42}, 
+ISSN={2329-6313}, 
+month={Aug},}

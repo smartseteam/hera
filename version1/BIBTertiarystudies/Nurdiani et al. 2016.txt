@@ -1,0 +1,13 @@
+@article{NURDIANI2016162,
+title = "The impacts of agile and lean practices on project constraints: A tertiary study",
+journal = "Journal of Systems and Software",
+volume = "119",
+pages = "162 - 183",
+year = "2016",
+issn = "0164-1212",
+doi = "https://doi.org/10.1016/j.jss.2016.06.043",
+url = "http://www.sciencedirect.com/science/article/pii/S0164121216300863",
+author = "Indira Nurdiani and Jürgen Börstler and Samuel A. Fricker",
+keywords = "Tertiary study, Agile software development, Lean software development, Project constraints",
+abstract = "The growing interest in Agile and Lean software development is reflected in the increasing number of secondary studies on the benefits and limitations of Agile and Lean processes and practices. The aim of this tertiary study is to consolidate empirical evidence regarding Agile and Lean practices and their respective impacts on project constraints as defined in the Project Management Body of Knowledge (PMBOK): scope, quality, schedule, budget, resources, communication, and risk. In this tertiary study, 13 secondary studies were included for detailed analysis. Given the heterogeneity of the data, we were unable to perform a rigorous synthesis. Instead, we mapped the identified Agile and Lean practices, and their impacts on the project constraints described in PMBOK. From 13 secondary studies, we identified 13 Agile and Lean practices. Test-Driven Development (TDD) is studied in ten secondary studies, meanwhile other practices are studied in only one or two secondary studies. This tertiary study provides a consolidated view of the impacts of Agile and Lean practices. The result of this tertiary study indicates that TDD has a positive impact on external quality. However, due to insufficient data or contradictory results, we were unable to make inferences on other Agile and Lean practices. Implications for research and practice are further discussed in the paper."
+}

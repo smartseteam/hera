@@ -1,0 +1,24 @@
+@article{CRUZES2011440,
+title = "Research synthesis in software engineering: A tertiary study",
+journal = "Information and Software Technology",
+volume = "53",
+number = "5",
+pages = "440 - 455",
+year = "2011",
+note = "Special Section on Best Papers from XP2010",
+issn = "0950-5849",
+doi = "https://doi.org/10.1016/j.infsof.2011.01.004",
+url = "http://www.sciencedirect.com/science/article/pii/S095058491100005X",
+author = "Daniela S. Cruzes and Tore Dybå",
+keywords = "Evidence-based software engineering, Empirical software engineering, Systematic review, Qualitative methods, Mixed-methods",
+abstract = "Context
+Comparing and contrasting evidence from multiple studies is necessary to build knowledge and reach conclusions about the empirical support for a phenomenon. Therefore, research synthesis is at the center of the scientific enterprise in the software engineering discipline.
+Objective
+The objective of this article is to contribute to a better understanding of the challenges in synthesizing software engineering research and their implications for the progress of research and practice.
+Method
+A tertiary study of journal articles and full proceedings papers from the inception of evidence-based software engineering was performed to assess the types and methods of research synthesis in systematic reviews in software engineering.
+Results
+As many as half of the 49 reviews included in the study did not contain any synthesis. Of the studies that did contain synthesis, two thirds performed a narrative or a thematic synthesis. Only a few studies adequately demonstrated a robust, academic approach to research synthesis.
+Conclusion
+We concluded that, despite the focus on systematic reviews, there is limited attention paid to research synthesis in software engineering. This trend needs to change and a repertoire of synthesis methods needs to be an integral part of systematic reviews to increase their significance and utility for research and practice."
+}

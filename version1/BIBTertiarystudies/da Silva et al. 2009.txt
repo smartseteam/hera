@@ -1,0 +1,8 @@
+@inproceedings{inproceedings,
+author = {Silva, Fabio and Santos, André and Soares, Sergio and França, César and Monteiro, Cleviton},
+year = {2010},
+month = {01},
+pages = {1-4},
+title = {A critical appraisal of systematic reviews in software engineering from the perspective of the research questions asked in the reviews},
+doi = {10.1145/1852786.1852830}
+}

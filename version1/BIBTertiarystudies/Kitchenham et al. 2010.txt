@@ -1,0 +1,23 @@
+@article{KITCHENHAM2010792,
+title = "Systematic literature reviews in software engineering – A tertiary study",
+journal = "Information and Software Technology",
+volume = "52",
+number = "8",
+pages = "792 - 805",
+year = "2010",
+issn = "0950-5849",
+doi = "https://doi.org/10.1016/j.infsof.2010.03.006",
+url = "http://www.sciencedirect.com/science/article/pii/S0950584910000467",
+author = "Barbara Kitchenham and Rialette Pretorius and David Budgen and O. Pearl Brereton and Mark Turner and Mahmood Niazi and Stephen Linkman",
+keywords = "Systematic literature review, Mapping study, Software engineering, Tertiary study",
+abstract = "Context
+In a previous study, we reported on a systematic literature review (SLR), based on a manual search of 13 journals and conferences undertaken in the period 1st January 2004 to 30th June 2007.
+Objective
+The aim of this on-going research is to provide an annotated catalogue of SLRs available to software engineering researchers and practitioners. This study updates our previous study using a broad automated search.
+Method
+We performed a broad automated search to find SLRs published in the time period 1st January 2004 to 30th June 2008. We contrast the number, quality and source of these SLRs with SLRs found in the original study.
+Results
+Our broad search found an additional 35 SLRs corresponding to 33 unique studies. Of these papers, 17 appeared relevant to the undergraduate educational curriculum and 12 appeared of possible interest to practitioners. The number of SLRs being published is increasing. The quality of papers in conferences and workshops has improved as more researchers use SLR guidelines.
+Conclusion
+SLRs appear to have gone past the stage of being used solely by innovators but cannot yet be considered a main stream software engineering research methodology. They are addressing a wide range of topics but still have limitations, such as often failing to assess primary study quality."
+}

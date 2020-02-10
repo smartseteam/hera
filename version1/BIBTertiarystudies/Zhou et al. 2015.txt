@@ -1,0 +1,17 @@
+@inproceedings{10.1145/2745802.2745815,
+author = {Zhou, You and Zhang, He and Huang, Xin and Yang, Song and Babar, Muhammad Ali and Tang, Hao},
+title = {Quality Assessment of Systematic Reviews in Software Engineering: A Tertiary Study},
+year = {2015},
+isbn = {9781450333504},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2745802.2745815},
+doi = {10.1145/2745802.2745815},
+booktitle = {Proceedings of the 19th International Conference on Evaluation and Assessment in Software Engineering},
+articleno = {Article 14},
+numpages = {14},
+keywords = {quality assessment, software engineering, systematic (literature) review},
+location = {Nanjing, China},
+series = {EASE ’15}
+}
+  
