@@ -1,20 +1,20 @@
 {
-  "name": "guttenberg-search",
+  "name": "HERA",
   "version": "0.0.1",
-  "description": "Source code for Elasticsearch tutorial using 100 classic open source books.",
+  "description": "Search page of Systematic Literature Reviews",
   "scripts": {
     "start": "node --inspect=0.0.0.0:9229 server/app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/triestpa/guttenberg-search.git"
+    "url": "git+https://github.com/"
   },
-  "author": "patrick.triest@gmail.com",
-  "license": "MIT",
+  "author": "a",
+  "license": "a",
   "bugs": {
-    "url": "https://github.com/triestpa/guttenberg-search/issues"
+    "url": "https://github.com/"
   },
-  "homepage": "https://github.com/triestpa/guttenberg-search#readme",
+  "homepage": "https://github.com/",
   "dependencies": {
     "elasticsearch": "13.3.1",
     "joi": "13.0.1",

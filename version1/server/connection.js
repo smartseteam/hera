@@ -38,7 +38,10 @@ async function putStudyMapping () {
     title: { type: 'text' },
     author: { type: 'text' },
     abstract: { type: 'text'},
-    text: { type: 'text' }
+    text: { type: 'text' },
+    doi: { type: 'text' },
+    url: { type: 'text' },
+    year: { type: 'text' }
   }
 
   return client.indices.putMapping({ index, type, body: { properties: schema } })

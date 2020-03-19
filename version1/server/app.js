@@ -4,6 +4,7 @@ const joi = require('joi')
 const validate = require('koa-joi-validate')
 const search = require('./search')
 
+
 const app = new Koa()
 const router = new Router()
 
@@ -38,12 +39,14 @@ router.get('/search',
   validate({
     query: {
       term: joi.string().max(60).required(),
-      offset: joi.number().integer().min(0).default(0)
+      offset: joi.number().integer().min(0).default(0),
+      select: joi.string().max(60).required()
     }
   }),
   async (ctx, next) => {
-    const { term, offset } = ctx.request.query
-    ctx.body = await search.queryTerm(term, offset)
+    const { term, offset, select } = ctx.request.query
+    ctx.body = await search.queryTerm(term, offset, select)
+    
   }
 )
 

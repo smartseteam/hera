@@ -8,61 +8,279 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" rel="stylesheet" type="text/css" />
   <link href="https://cdn.muicss.com/mui-0.9.20/css/mui.min.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,700|Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link href="styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<div class="app-container" id="vue-instance">
+  <div class="app-container" id="vue-instance">
+    <div class="row top">
+    <div class="col">
+      <img src="logo.jpg" class="rounded float-left img-fluid" alt="...">
+    </div>
+    <div class="col-6">
+    </div>
+    <div class="col">
+    </div>
+  </div>
     <!-- Search Bar Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"    aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="    false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      <form class="form-inline" v-on:submit.prevent="onSearchInput()"> 
+        
+      <div class="input-group">  
+        <select class="custom-select searchfield" title="Title Abstract Keywords" v-model="topicSearch">
+          <option selected>Title Abstract Keywords</option>
+          <option>Title</option>
+          <option>Abstract</option>
+          <option>Keywords</option>
+          <option>Author</option>
+        </select>
+       <!-- <select class="custom-select searchfield">
+          <option selected>Tertiary Studies</option>
+          <option>Secondary Studies</option>
+        </select>-->
+  
+      
+        <input class="form-control  searchfield" type="text" placeholder="Search" aria-label="Search" v-model="searchTerm" v-on:keyup.enter=" onSearchInput()">
+        <div class="input-group-append">
+        <buton class="btn btn-outline-secondary  my-sm-0 searchfield border-left-0" @click="onSearchInput()"><i class="fa fa-search fa-2x" aria-hidden="true"></i></buton>
+        </div> 
+      </div>
+      </form>
+    </div>
+    </nav>
+<!--
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"    aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="    false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <!--
     <div class="mui-panel">
       <div class="mui-textfield">
         <input v-model="searchTerm" type="text" v-on:keyup="onSearchInput()">
         <label>Search</label>
       </div>
-    </div>
-
-    <!-- Search Metadata Card -->
-    <div class="mui-panel">
-      <div class="mui--text-headline">{{ numHits }} Hits</div>
-      <div class="mui--text-subhead">Displaying Results {{ searchOffset }} - {{ searchOffset + 9 }}</div>
-    </div>
-
-    <!-- Top Pagination Card -->
-    <div class="mui-panel pagination-panel">
-        <button class="mui-btn mui-btn--flat" v-on:click="prevResultsPage()">Prev Page</button>
-        <button class="mui-btn mui-btn--flat" v-on:click="nextResultsPage()">Next Page</button>
-    </div>
-
-    <!-- Search Results Card List -->
-    <div class="search-results" ref="searchResults">
-      <div class="mui-panel" v-for="hit in searchResults" v-on:click="showBookModal(hit)">
-        <div class="mui--text-title"><ti class="mui--text-title">Title:</ti> {{ hit._source.title }}</div>
-        <div class="mui-divider"></div>
-        <div class="mui--text-subhead">Authors:<author v-for="author in hit._source.author"> {{ author }};</author></div>
-        <div class="mui--text-subhead">Abstract: <abstract class="mui--text-subhead">{{ hit._source.abstract }}</abstract></div>
-        <div class="mui--text-body2">Keywords:<key class="keywords" v-for="keyword in hit._source.text"> {{ keyword }}</key></div>
-        <!--<div class="mui--text-body2">
-        	<button v-on:click="myFunction()">Show</button>
+    </div>-->
+    <div class="container-body">
+      <div class="row justify-content-between">
+        <div class="content-filters col-4">
+          <p></p>
         </div>
-        <div class="mui--text-body2" id="myDIV">
-        	<div class="mui-divider"></div>
-        	<div class="mui--text-body2">aa</div>
-        </div>-->
+        <div class="content-results rounded border border-secondary col-8" id="content-results" > <!--v-if="numHits"-->
+        <!-- Search Metadata Card -->
+          <div class="mui-panel">
+            <div class="mui--text-headline"><b>{{ numHits }}</b> studies matching "{{ searchTerm }}" in {{ topicSearch }}</div>
+            <!--<div class="mui--text-subhead"><b>HERA</b> Database of Systematic Reviews </div>-->
+            <!--<div class="mui--text-subhead">Displaying Results {{ searchOffset }} - {{ searchOffset + 9 }}</div>-->
+          </div>
+      
+      
+          <!-- Top Pagination Card 
+          <div class="mui-panel pagination-panel">
+              <button class="mui-btn mui-btn--flat" v-on:click="prevResultsPage()">Prev Page</button>
+              <button class="mui-btn mui-btn--flat" v-on:click="nextResultsPage()">Next Page</button>
+          </div>-->
+      
+          <!-- Search Results Card List -->
+          <div class="search-results" ref="searchResults">
+           <!-- <div class="mui-panel" v-for="hit in searchResults" v-on:click="showBookModal(hit)">
+              <div class="mui--text-title"><ti class="mui--text-title">Title:</ti> {{ hit._source.title }}</div>
+              <div class="mui-divider"></div>
+              <div class="mui--text-subhead">Authors:<author v-for="author in hit._source.author"> {{ author }};</author></div>
+              <div class="mui--text-subhead">DOI: <abstract class="mui--text-subhead">{{ hit._source.doi }}</abstract></div>
+              <div class="mui--text-subhead">Year: <abstract class="mui--text-subhead">{{ hit._source.year }}</abstract></div>
+              <button v-on:click="showhide(hit._source.doi)" v-bind:id="'btn'+ hit._source.doi">Show</button>
+              <div class="mui--hide" v-bind:id="hit._source.doi">
+                <div class="mui--text-subhead">Abstract: <abstract class="mui--text-subhead">{{ hit._source.abstract }}</abstract></div>
+                <div class="mui--text-body2">Keywords: <key class="keywords" v-for="keyword in hit._source.text"> {{ keyword }} </key></div>  
+              </div>
+              
+            </div>-->
+            <div class="card" v-for="hit in searchResults">
+              <div class="card-header">
+                <a v-bind:href="hit._source.doi" style="color: #cf6560;" target="_blank"><b>{{ hit._source.title }}</b></a>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Authors:<author v-for="author in hit._source.author"> {{ author }};</author></h4>
+                <p class="card-text">Year: {{ hit._source.year }}</p>
+                <button v-on:click="showhide(hit._source.doi)" v-bind:id="'btn'+ hit._source.doi" class="btn btn-light" type="button" >Show</button>
+                <i class="fa fa-download" aria-hidden="true">.bib</i>
+                <div class="mui--hide" v-bind:id="hit._source.doi">
+                  <div class="card card-body">
+                    <div class="mui--text-subhead">Abstract: <abstract class="mui--text-subhead">{{ hit._source.abstract }}</abstract></div>
+                    <div class="mui--text-body2">Keywords: <key class="keywords" v-for="keyword in hit._source.text"> {{ keyword }} </key></div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+      
+      
+          <!-- Bottom Pagination Card 
+          <div class="mui-panel pagination-panel">
+              <button class="mui-btn mui-btn--flat" v-on:click="prevResultsPage()">Prev Page</button>
+              <button class="mui-btn mui-btn--flat" v-on:click="nextResultsPage()">Next Page</button>
+          </div>-->
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center pagination-lg">
+              <li class="page-item">
+                <a class="page-link" v-on:click="prevResultsPage()">Previous</a>
+              </li><!--
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>-->
+              <li class="page-item">
+                <a class="page-link" v-on:click="nextResultsPage()">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
-
-    <!-- Bottom Pagination Card -->
+<!--
     <div class="mui-panel pagination-panel">
-        <button class="mui-btn mui-btn--flat" v-on:click="prevResultsPage()">Prev Page</button>
-        <button class="mui-btn mui-btn--flat" v-on:click="nextResultsPage()">Next Page</button>
+        <button class="btn btn-primary" @click="refresh()">Refresh</button>
+		<button class="btn btn-default" @click="prev()">Prev</button>
+		<button class="btn btn-default" @click="next()">Next</button>
+		<button class="btn btn-default" @click="prevChunk()">Prev Chunk</button>
+		<button class="btn btn-default" @click="nextChunk()">Next Chunk</button>
+		<div >
+		Records:
+		<input type="text" @keyup="refresh()" v-model="records">
+		Per Page:
+		<input type="text" @keyup="refresh()" v-model="perpage">
+		</div>
+		
+		<h3>Displaying page {{table1Page}} out of {{totalPages}} <small>({{PerPage}} records per page)</small></h3>
+		
+		  <pagination v-ref:table for="table" :per-page="PerPage" :records="Records"></pagination>
+		  <p v-if="!Records">No records</p>
+		  
+		<p class="note">
+		Check out the <a href="https://jsfiddle.net/matfish2/f5h8xwgn/" target="_blank">vue-tables</a> package, now using this pagination component.</p>
     </div>
-
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="   false">
+        Dropdown button
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </div>
+-->
     <!-- INSERT BOOK MODAL HERE -->
     
+  </div>
+  <div class="mt-5 pt-5 pb-5 footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-xs-12 about-company">
+        <h2>Hera Repository</h2>
+        <p class="pr-5 text-white-50">Tertiary and Secondary Studies in Software Engineering Repository</p>
+        <p><a href="#"><i class="fa fa-facebook-square mr-1"></i></a><a href="#"><i class="fa fa-linkedin-square"></i></a></p>
+      </div>
+      <div class="col-lg-3 col-xs-12 links">
+      <!--  <h4 class="mt-lg-0 mt-sm-3">Links</h4>
+          <ul class="m-0 p-0">
+            <li>- <a href="#">UQAC</a></li>
+            <li>- <a href="#">LIF</a></li>
+            <li>- <a href="#">Etiam vitae mauris</a></li>
+            <li>- <a href="#">Fusce scelerisque</a></li>
+            <li>- <a href="#">Sed faucibus</a></li>
+            <li>- <a href="#">Mauris efficitur nulla</a></li>
+          </ul>
+        -->
+        <img src="lif.png" class="rounded float-left img-fluid" alt="...">
+      </div>
+      <div class="col-lg-3 col-xs-12 location">
+        <h4 class="mt-lg-0 mt-sm-4">Université du Québec à Chicoutimi</h4>
+        <p>555, boulevard de l’Université</br>
+        Chicoutimi (Québec)</br>
+        Canada  G7H 2B1</p>
+        <p class="mb-0"><i class="fa fa-phone mr-3"></i>(418) 545-5011</p>
+        <p><i class="fa fa-envelope-o mr-3"></i>contact@hera.com</p>
+      </div>
+      <div class="col-lg-3 col-xs-12 links">
+        <img src="uqac.svg" class="rounded float-left img-fluid" alt="...">
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col copyright">
+        <p class=""><small class="text-white-50">© 2020. All Rights Reserved.</small></p>
+      </div>
+    </div>
+  </div>
+  </div>
 
-</div>
 <script src="https://cdn.muicss.com/mui-0.9.28/js/mui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.0/axios.min.js"></script>
 <script src="app.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

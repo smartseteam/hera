@@ -12,7 +12,7 @@ services:
      - ES_HOST=elasticsearch
      - PORT=3000
     volumes: # Attach local book data directory
-      - ./books:/usr/src/app/books
+      - ./BIBTertiarystudies:/usr/src/app/BIBTertiarystudies
 
   frontend: # Nginx Server For Frontend App
     container_name: gs-frontend

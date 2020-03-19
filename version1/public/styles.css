@@ -1,11 +1,11 @@
-body { font-family: 'EB Garamond', serif; }
+body { font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; font-size: 13px; background-color: rgba(0,0,0,.03);}
 
 .mui-textfield > input, .mui-btn, .mui--text-subhead, .mui-panel > .mui--text-headline {
   font-family: 'Open Sans', sans-serif;
 }
 
 .all-caps { text-transform: uppercase; }
-.app-container { padding: 16px; }
+.app-container { padding: 0; }
 .search-results em { font-weight: bold; }
 .book-modal > button { width: 100%; }
 .search-results .mui-divider { margin: 14px 0; }
@@ -18,9 +18,19 @@ body { font-family: 'EB Garamond', serif; }
 }
 
 .search-results > div {
-  flex-basis: 45%;
+  flex-basis: 100%; 
   box-sizing: border-box;
   cursor: pointer;
+}
+
+.img-fluid{
+    min-width: 180px;
+}
+
+@media (min-width: 992px) { 
+  .img-fluid{
+    max-width: 250px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -90,3 +100,116 @@ body { font-family: 'EB Garamond', serif; }
 .keywords{
   margin-right: 5px;
 }
+
+.bg-light {
+  background-color: #FFE4E1!important;
+  font-size: 13px;
+}
+
+.searchfield{
+  height: 2.9375rem;
+  font-family: "Source Sans Pro",sans-serif;
+}
+select.searchfield{
+  font-size: 13px;
+  min-width: 16.9375rem;
+}
+
+input.searchfield{
+  font-size: 13px;
+  max-height: 2.9375rem;
+  min-width: 26.9375rem;
+}
+
+buton.searchfield{
+  background: white;
+  color: black;
+  border: 1px solid #ced4da;
+}
+
+.btn-outline-success, .btn-outline-success:hover, .btn-outline-success:active, .btn-outline-success:not {
+  color: #fff;
+  background-color: #ced4da;
+  border-color: #ced4da;
+}
+
+.card {
+  font-size: 16px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin-bottom: 1.9375rem;
+}
+
+.mui-panel{
+  margin-bottom: 0px;
+  -webkit-box-shadowr: none;
+  box-shadow: none;
+}
+
+.html{
+  background-color: rgba(0,0,0,.03);
+}
+
+.top{
+  background-color: white;
+  margin-right: 0px; 
+  margin-left: 0px;
+}
+
+.rounded {
+  border-radius: 1.25rem!important;
+}
+
+.content-results {
+  background-color: white;
+}
+
+.container-body{
+  padding: 30px;
+  min-height: 55.9375rem;
+}
+
+
+.footer{
+  background: #303030;
+  color:white;
+  
+  .links{
+    ul {list-style-type: none;}
+    li a{
+      color: white;
+      transition: color .2s;
+      &:hover{
+        text-decoration:none;
+        color:#4180CB;
+        }
+    }
+  }  
+  .about-company{
+    i{font-size: 25px;}
+    a{
+      color:white;
+      transition: color .2s;
+      &:hover{color:#4180CB}
+    }
+  } 
+  .location{
+    i{font-size: 18px;}
+  }
+  .copyright p{border-top:1px solid rgba(255,255,255,.1);} 
+}
+
+.card-header{
+  color: #cf6560;
+}
+/*
+.bootstrap-select .bs-ok-default::after {
+    width: 0.3em;
+    height: 0.6em;
+    border-width: 0 0.1em 0.1em 0;
+    transform: rotate(45deg) translateY(0.5rem);
+}
+
+.btn.dropdown-toggle:focus {
+    outline: none !important;
+}
+*/

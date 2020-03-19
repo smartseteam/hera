@@ -9,6 +9,8 @@ COPY package*.json ./
 
 # Install app dependencies
 RUN npm install
+RUN npm install csv-parser
+RUN npm install csv-writer
 
 # Copy sourcecode
 COPY . .
