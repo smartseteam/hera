@@ -12,6 +12,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link href="styles.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons">
+  <link rel="stylesheet" href="https://unpkg.com/vue-material/dist/vue-material.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/vue-material/dist/theme/default.css">
 </head>
 <body>
   <div class="app-container" id="vue-instance">
@@ -51,12 +55,23 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+            <a id="a" download="exp.csv" type="text/csv">export csv</a>
           </li>
         </ul>
       <form class="form-inline" v-on:submit.prevent="onSearchInput()"> 
+      <!--<select class="custom-select searchfield" title="Tertiary Studies" id="searchtopic" v-model="studyType">
+        <option selected>Tertiary Studies</option>
+        <option>Secondary Studies</option>
+      </select>-->
+
+      <div class="input-group">
+        <input type="checkbox" id="tertiary" value="tertiary" v-model="checked" checked>
+        <label for="tertiary">Tertiary Studies</label>
+        <input type="checkbox" id="secondary" value="secondary" v-model="checked">
+        <label for="secondary">Secondary Studies</label>  
+
         
-      <div class="input-group">  
+
         <select class="custom-select searchfield" title="Title Abstract Keywords" v-model="topicSearch">
           <option selected>Title Abstract Keywords</option>
           <option>Title</option>
@@ -64,13 +79,16 @@
           <option>Keywords</option>
           <option>Author</option>
         </select>
-       <!-- <select class="custom-select searchfield">
-          <option selected>Tertiary Studies</option>
-          <option>Secondary Studies</option>
+       <!--<select id="tipo" class="js-example-basic-multiple" name="states[]" multiple="multiple" title="Title Abstract Keywords" >
+          <option selected>Title Abstract Keywords</option>
+          <option>Title</option>
+          <option>Abstract</option>
+          <option>Keywords</option>
+          <option>Author</option>
         </select>-->
   
       
-        <input class="form-control  searchfield" type="text" placeholder="Search" aria-label="Search" v-model="searchTerm" v-on:keyup.enter=" onSearchInput()">
+        <input class="form-control  searchfield" type="text" id="termo" placeholder="Search" aria-label="Search" v-model="searchTerm" v-on:keyup.enter=" onSearchInput()">
         <div class="input-group-append">
         <buton class="btn btn-outline-secondary  my-sm-0 searchfield border-left-0" @click="onSearchInput()"><i class="fa fa-search fa-2x" aria-hidden="true"></i></buton>
         </div> 
@@ -126,10 +144,10 @@
         <div class="content-filters col-4">
           <p></p>
         </div>
-        <div class="content-results rounded border border-secondary col-8" id="content-results" > <!--v-if="numHits"-->
+        <div class="content-results rounded border border-secondary col-8" id="content-results" v-if="numHits"> <!--v-if="numHits"-->
         <!-- Search Metadata Card -->
           <div class="mui-panel">
-            <div class="mui--text-headline"><b>{{ numHits }}</b> studies matching "{{ searchTerm }}" in {{ topicSearch }}</div>
+            <div class="mui--text-headline"><b>{{ numHits }}</b> {{ studyType }} matching "{{ searchTerm }}" in {{ topicSearch }}</div>
             <!--<div class="mui--text-subhead"><b>HERA</b> Database of Systematic Reviews </div>-->
             <!--<div class="mui--text-subhead">Displaying Results {{ searchOffset }} - {{ searchOffset + 9 }}</div>-->
           </div>
@@ -279,8 +297,24 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.0/axios.min.js"></script>
 <script src="app.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+<script>
+$( document ).ready(function() {
+  $('#tipo').select2();
+  //$("#tertiary").prop('checked', true);
+  //$("#secondary").prop('checked', true);
+  //console.log($('#tipo').select2("val"));
+  $('#tipo').on('change', function() {
+    //alert($('#tipo').select2("val"));
+    $('#searchtopic').val($('#tipo').select2("val"));
+    //alert($('searchtopic').val());
+  });
+});
+</script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/vue-material"></script>
 </body>
 </html>

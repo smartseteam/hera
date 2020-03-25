@@ -9,7 +9,8 @@ const vm = new Vue ({
     return {
       baseUrl: 'http://localhost:3000', // API url
       searchTerm: '', // Default search term
-      topicSearch: 'Title Abstract Keywords',
+      topicSearch: 'Title Abstract Keywords', // Default search select
+      studyType: 'Tertiary Studies', // Default search study
       searchDebounce: null, // Timeout for search bar debounce
       searchResults: [], // Displayed search results
       numHits: null, // Total search results found
@@ -23,7 +24,8 @@ const vm = new Vue ({
       table2Page:1,
       code:'table1',
       records:100,
-      perpage:10
+      perpage:10,
+      checked: ['Tertiary Studies', 'Secondary Studies']
     }
   },
   async created () {
@@ -52,9 +54,10 @@ const vm = new Vue ({
     },
     /** Call API to search for inputted term */
     async search () {
-      const response = await axios.get(`${this.baseUrl}/search`, { params: { term: this.searchTerm, offset: this.searchOffset, select: this.topicSearch } })
+      const response = await axios.get(`${this.baseUrl}/search`, { params: { term: this.searchTerm, offset: this.searchOffset, study: this.studyType, select: this.topicSearch } })
       this.numHits = response.data.hits.total
-      //console.log(topicSearch)
+      console.log(this.studyType)
+      this.exp(response);
       return response.data.hits.hits
     },
     /** Get next page of search results */
@@ -73,6 +76,54 @@ const vm = new Vue ({
       this.searchResults = await this.search()
       document.documentElement.scrollTop = 0
     },
+
+    //export csv
+    async exp (response) {
+      totReg = this.numHits
+      arrayData = response.data.hits.hits
+      offsetsearch = this.searchOffset
+      bodyData = "";
+      countHits = 0;
+      countTot = 0;
+      while(countTot < totReg){
+        if(countHits == 10){
+          countHits = 0;
+          offsetsearch += 10;
+          const response = await axios.get(`${this.baseUrl}/search`, { params: { term: this.searchTerm, offset: offsetsearch, study: this.studyType, select: this.topicSearch } })
+          arrayData = response.data.hits.hits
+        }
+        arrayData.forEach(element => { 
+          console.log(element);
+          e = element._source;
+          authors = "";
+          keywords = "";
+          e.author.forEach(author => { 
+            authors += author + ", ";
+          });
+          e.text.forEach(keyword => { 
+            keywords += keyword + "; ";
+          });
+          authors = authors.slice(0, -2);
+          keywords = keywords.slice(0, -2);
+          abstract = e.abstract.replace(/['"]+/g, '')
+          abstract = abstract.replace(/,/g, '')
+          abstract = abstract.replace(/\n/g, '')
+          title = e.title.replace(/,/g, '')
+          bodyData += '"' + authors +'", "'+ title.replace(/['"]+/g, '') +'", "'+ e.year +'", "'+ e.doi.slice(16) +'", "'+ e.url +'", "'+ abstract +'", "'+ keywords + '"\n';
+          
+          countHits ++;
+          countTot ++;
+        });
+      } 
+      header = "Authors,Title,Year,DOI,Link,Abstract,Author Keywords\n";
+      dataCsv = header + bodyData; 
+      //create csv  
+      var data = new Blob([dataCsv]);
+      var a = document.getElementById("a");
+      a.href = URL.createObjectURL(data);
+
+    },
+
 
     async showhide(doi) {
       var kds = document.getElementById(doi);

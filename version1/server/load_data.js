@@ -17,7 +17,7 @@ async function readAndInsertStudys () {
       console.log(`Reading File - ${file}`)
       const filePath = path.join('./BIBTertiarystudies', file)
       parseStudyFile(filePath, file)
-      await insertStudyData(title, author, keywords, abstract, doi, url, year)
+      await insertStudyData(title, author, keywords, abstract, doi, url, year, type)
     }
 
 
@@ -42,9 +42,9 @@ async function readAndInsertStudys () {
       var url = row['Link'];
       var abstract = row['Abstract'];
       var keywords = row['Author Keywords'].split(',');
-      //keywords = keywords.replace(/[;]/g, '');
+      var type = "Secondary Studies"
       var documentType = row['Document Type'];
-      insertStudyData(title, author, keywords, abstract, doi, url, year);
+      insertStudyData(title, author, keywords, abstract, doi, url, year, type);
     })
     .on('end', () => {
       console.log('CSV file successfully processed');
@@ -116,6 +116,7 @@ function parseStudyFile (filePath, file) {
   if (doi.match(/^https:\/\/doi\.org\/?/m) == null) {
     doi = "https://doi.org/" + doi
   }
+  type = "Tertiary Studies"
 
   //test informations 
   
@@ -172,11 +173,11 @@ function parseStudyFile (filePath, file) {
 
   //console.log("p = "+keywords+" / t = "+title+" / a = "+author)
 
-  return { title, author, keywords, abstract, doi, url, year }
+  return { title, author, keywords, abstract, doi, url, year, type }
 }
 
 /* Bulk index the Study data in Elasticsearch */
-async function insertStudyData (title, author, keywords, abstract, doi, url, year) {
+async function insertStudyData (title, author, keywords, abstract, doi, url, year, type) {
   let bulkOps = [] // Array to store bulk operations
   //console.log(keywords)
 
@@ -192,7 +193,7 @@ async function insertStudyData (title, author, keywords, abstract, doi, url, yea
     doi,
     url,
     year,
-    //location: i,
+    type,
     text: keywords
   })
 

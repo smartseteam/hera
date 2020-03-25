@@ -40,12 +40,13 @@ router.get('/search',
     query: {
       term: joi.string().max(60).required(),
       offset: joi.number().integer().min(0).default(0),
+      study: joi.string().max(60).required(),
       select: joi.string().max(60).required()
     }
   }),
   async (ctx, next) => {
-    const { term, offset, select } = ctx.request.query
-    ctx.body = await search.queryTerm(term, offset, select)
+    const { term, offset, study, select  } = ctx.request.query
+    ctx.body = await search.queryTerm(term, offset, select, study)
     
   }
 )

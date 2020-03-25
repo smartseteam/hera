@@ -11,6 +11,8 @@ COPY package*.json ./
 RUN npm install
 RUN npm install csv-parser
 RUN npm install csv-writer
+RUN npm install vue-multiselect
+RUN npm install vue-material
 
 # Copy sourcecode
 COPY . .

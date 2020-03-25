@@ -2,7 +2,7 @@ const { client, index, type } = require('./connection')
 /*const csv = require('csv-parser')
 const fs = require('fs')*/
 
-function teste(term, offset, select){
+function teste(term, offset, select, study){
   switch(select) {
     case "Title": 
       body = {  from: offset, query: { match: { title: { query: term, fuzziness: 'auto' } } } , highlight: { fields: { title: {} } } }  
@@ -20,6 +20,7 @@ function teste(term, offset, select){
       body = {  from: offset, query: { match: { doi: { query: term, fuzziness: 'auto' } } } , highlight: { fields: { doi: {} } } }  
       break;   
     case "Title Abstract Keywords": 
+      //body = { from: offset, query: { bool: { must: { multi_match: { query: term, fields: [ "text", "title", "abstract"], type: "most_fields", operator: 'or', fuzziness: 'auto' } }, "term" : { "type": study }}, highlight: { fields: { text: {}, title: {}, abstract: {} } } }}  
       body = { from: offset, query: { multi_match: { query: term, fields: [ "text", "title", "abstract"], type: "most_fields", operator: 'or', fuzziness: 'auto' } } , highlight: { fields: { text: {}, title: {}, abstract: {} } } }  
       break;  
   }
@@ -29,8 +30,8 @@ function teste(term, offset, select){
 module.exports = {
   /** Query ES index for the provided term */
   //if (select == "title") {
-  queryTerm (term, offset = 0, select) {  
-    teste(term, offset, select)
+  queryTerm (term, offset = 0, select, study) {  
+    teste(term, offset, select, study)
     /*
     const body = {
       from: offset,
